@@ -8,10 +8,11 @@ const home = async ( req, res ) => {
 
 const register = async ( req, res ) => {
 try {
-    res.send("welcome to register page using controllers ");
-} catch (error) {
-    res.send({msg:"page not found "})
-}
-}
+    res.json({message: req.body});
 
-module.exports = { home, register }; 
+} catch (error) {
+    res.json({msg:"page not found "})
+}
+};
+
+module.exports = { home, register };
