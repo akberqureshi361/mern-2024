@@ -4,9 +4,7 @@ const app = express()
 
 app.use("/api/auth", router);
 
-app.get('/', function (req, res) {
-  res.send('Hello World')
-});
+
 
 const PORT = 8000;
 
