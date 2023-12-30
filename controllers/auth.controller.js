@@ -29,17 +29,19 @@ const register = async (req, res) => {
         console.log(req.body);
         const { username, email, phone, password } = req.body;
 
-        const userExist = await User.findOne({ email });
+        const userExist = await User.findOne({ email : email });
+
         if (userExist) {
             return res.status(400).json({ msg: "email already exists" });
         }
-        const userCreate = await User.create({ username, email, phone, password });
+
+        const userCreated = await User.create({ username, email, phone, password });
 
 
-        res.status(200).json({ msg: userCreate });
+        res.status(200).json({ msg: userCreated });
 
-    } catch (error) {
-        res.json({ msg: "page not found " })
+    }catch (error) {
+        res.status(500).json({ msg: "page not found " });
     }
 };
 
