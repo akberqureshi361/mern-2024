@@ -43,7 +43,7 @@ const register = async (req, res) => {
 
 
 
-        const userCreated = await User.create ({ username, email, phone, password: hash_password, });
+        const userCreated = await User.create({ username, email, phone, password: hash_password, });
 
 
         res.status(201).json({
@@ -52,7 +52,7 @@ const register = async (req, res) => {
             userId: userCreated._id.toString(),
         });
 
-    } catch (error) {
+    }catch (error) {
         res.status(500).json({ msg: "page not found " });
     };
 };
