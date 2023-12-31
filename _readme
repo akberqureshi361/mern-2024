@@ -1,0 +1,11 @@
+registration karne k leye hame kya kaya karna padha 
+
+1. humne db.js m database se connection banaya 
+2. phir humne uska model ki help se schema banaya
+3. humne auth auth.controller p jake registration ka logic likha 
+4.  or ab login kese karne sikhenge ok bhai 
+
+
+Login 
+sabse pehle aap auth.router p jake ek route bana le 
+
