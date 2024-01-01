@@ -43,6 +43,11 @@ const userSchema = new mongoose.Schema({
 
 
 
+// compare the password 
+// userSchema.methods.comparePassword = async function ( passoword ) {
+//         return await bcrypt.compare( password, this.password); 
+// }
+
 // json web token (jwt token )
 // jwt ko hum kabhi bhi server p store nahi karte hain blaki hum ise apne server p hi karte hain
 // or hum jab apne browser p data ko save karte  hain use (cookie) kaha jata h !!yaad rakhan
